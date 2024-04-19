@@ -1,4 +1,4 @@
-package sdaia.courses.designpatterns.ChainofResponsibility.handlers;
+package sdaia.courses.designpatterns.chainofResponsibility.handlers;
 
 public abstract class AbstractSupportHandler {
 

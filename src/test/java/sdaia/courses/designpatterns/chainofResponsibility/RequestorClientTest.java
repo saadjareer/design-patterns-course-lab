@@ -1,7 +1,7 @@
-package sdaia.courses.designpatterns.ChainofResponsibility;
+package sdaia.courses.designpatterns.chainofResponsibility;
 
 import org.junit.Test;
-import sdaia.courses.designpatterns.ChainofResponsibility.handlers.AbstractSupportHandler;
+import sdaia.courses.designpatterns.chainofResponsibility.handlers.AbstractSupportHandler;
 
 
 public class RequestorClientTest {

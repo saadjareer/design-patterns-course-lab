@@ -1,9 +1,9 @@
-package sdaia.courses.designpatterns.ChainofResponsibility;
+package sdaia.courses.designpatterns.chainofResponsibility;
 
-import sdaia.courses.designpatterns.ChainofResponsibility.handlers.AbstractSupportHandler;
-import sdaia.courses.designpatterns.ChainofResponsibility.handlers.BillingSupportHandler;
-import sdaia.courses.designpatterns.ChainofResponsibility.handlers.GeneralSupportHandler;
-import sdaia.courses.designpatterns.ChainofResponsibility.handlers.TechnicalSupportHandler;
+import sdaia.courses.designpatterns.chainofResponsibility.handlers.AbstractSupportHandler;
+import sdaia.courses.designpatterns.chainofResponsibility.handlers.BillingSupportHandler;
+import sdaia.courses.designpatterns.chainofResponsibility.handlers.GeneralSupportHandler;
+import sdaia.courses.designpatterns.chainofResponsibility.handlers.TechnicalSupportHandler;
 
 public class RequestorClient {
 
