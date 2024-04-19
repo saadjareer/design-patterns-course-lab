@@ -4,8 +4,10 @@ import sdaia.courses.designpatterns.bridge.implementation.MessageSender;
 
 public abstract class Message {
     MessageSender messageSender;
-    public Message(MessageSender messageSender){
-        this.messageSender=messageSender;
+
+    public Message(MessageSender messageSender) {
+        this.messageSender = messageSender;
     }
-     abstract public void send();
+
+    abstract public void send();
 }

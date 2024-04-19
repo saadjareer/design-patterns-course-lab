@@ -3,7 +3,7 @@ package sdaia.courses.designpatterns.chainofResponsibility.handlers;
 
 public class GeneralSupportHandler extends AbstractSupportHandler {
 
-    public GeneralSupportHandler(int level){
+    public GeneralSupportHandler(int level) {
         this.level = level;
     }
 

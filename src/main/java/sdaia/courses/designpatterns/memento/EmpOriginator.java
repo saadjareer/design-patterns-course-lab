@@ -7,12 +7,11 @@ public class EmpOriginator {
     private String empPhoneNo;
     private String empDesignation;
 
-    public EmpOriginator(int empId, String empName, String empPhoneNo,String empDesignation)
-    {
-        this.empId=empId;
-        this.empName=empName;
-        this.empPhoneNo=empPhoneNo;
-        this.empDesignation=empDesignation;
+    public EmpOriginator(int empId, String empName, String empPhoneNo, String empDesignation) {
+        this.empId = empId;
+        this.empName = empName;
+        this.empPhoneNo = empPhoneNo;
+        this.empDesignation = empDesignation;
     }
 
     public int getEmpId() {
@@ -50,11 +49,11 @@ public class EmpOriginator {
     public EmpMemento saveToMemento() {
 
         EmpMemento empMemento;
-        empMemento = new EmpMemento(this.empId, this.empName, this.empPhoneNo, this.empDesignation );
+        empMemento = new EmpMemento(this.empId, this.empName, this.empPhoneNo, this.empDesignation);
         return empMemento;
     }
-    public  void undoFromMemento(EmpMemento memento)
-    {
+
+    public void undoFromMemento(EmpMemento memento) {
 
         this.empId = memento.getEmpId();
         this.empName = memento.getEmpName();
@@ -62,12 +61,11 @@ public class EmpOriginator {
         this.empDesignation = memento.getEmpDesignation();
     }
 
-    public void printInfo()
-    {
-        System.out.println("ID: "+ this.empId);
-        System.out.println("Name: "+ this.empName);
-        System.out.println("Phone Number: "+ this.empPhoneNo);
-        System.out.println("Designation: "+ this.empDesignation);
+    public void printInfo() {
+        System.out.println("ID: " + this.empId);
+        System.out.println("Name: " + this.empName);
+        System.out.println("Phone Number: " + this.empPhoneNo);
+        System.out.println("Designation: " + this.empDesignation);
     }
 
 }

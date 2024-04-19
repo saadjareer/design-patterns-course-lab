@@ -3,9 +3,10 @@ package sdaia.courses.designpatterns.iterator;
 public class DesignPattern {
     private String patternType;
     private String patternName;
-    public DesignPattern(String patternType, String patternName){
-        this.patternType=patternType;
-        this.patternName=patternName;
+
+    public DesignPattern(String patternType, String patternName) {
+        this.patternType = patternType;
+        this.patternName = patternName;
     }
 
     public String getPatternType() {
@@ -13,11 +14,9 @@ public class DesignPattern {
         return patternType;
     }
 
-      public String getPatternName() {
-          return patternName;
+    public String getPatternName() {
+        return patternName;
     }
-
-
 
 
 }

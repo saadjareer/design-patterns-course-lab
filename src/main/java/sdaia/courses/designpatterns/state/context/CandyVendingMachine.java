@@ -12,32 +12,32 @@ public class CandyVendingMachine {
     CandyVendingMachineState state;
     int count;
 
-    public CandyVendingMachine(int numberOfCandies){
-        count=numberOfCandies;
-        noCoinState=new NoCoinState(this);
-        noCandyState=new NoCandyState(this);
-        dispensedState=new DispensedState(this);
-        containsCoinState=new ContainsCoinState(this);
+    public CandyVendingMachine(int numberOfCandies) {
+        count = numberOfCandies;
+        noCoinState = new NoCoinState(this);
+        noCandyState = new NoCandyState(this);
+        dispensedState = new DispensedState(this);
+        containsCoinState = new ContainsCoinState(this);
         state = noCoinState;
     }
 
-    public void refillCandy(int count){
-        this.count+=count;
-        this.state=noCoinState;
+    public void refillCandy(int count) {
+        this.count += count;
+        this.state = noCoinState;
     }
 
-    public void ejectCandy(){
-        if(count!=0){
+    public void ejectCandy() {
+        if (count != 0) {
             count--;
         }
     }
 
-    public void insertCoin(){
+    public void insertCoin() {
         System.out.println("You inserted a coin.");
         state.insertCoin();
     }
 
-    public void pressButton(){
+    public void pressButton() {
         System.out.println("You have pressed the button.");
         state.pressButton();
         state.dispense();
@@ -90,10 +90,11 @@ public class CandyVendingMachine {
     public void setDispensedState(CandyVendingMachineState dispensedState) {
         this.dispensedState = dispensedState;
     }
+
     @Override
-    public String toString(){
+    public String toString() {
         String machineDef;
-        machineDef = "Current state of machine "+state +". Candies available "+count;
+        machineDef = "Current state of machine " + state + ". Candies available " + count;
         return machineDef;
     }
 

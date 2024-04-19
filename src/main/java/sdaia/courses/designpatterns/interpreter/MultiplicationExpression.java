@@ -1,18 +1,21 @@
 package sdaia.courses.designpatterns.interpreter;
 
 
-public class MultiplicationExpression implements Expression{
-    private Expression firstExpression,secondExpression;
-    public MultiplicationExpression(Expression firstExpression, Expression secondExpression){
-        this.firstExpression=firstExpression;
-        this.secondExpression=secondExpression;
+public class MultiplicationExpression implements Expression {
+    private Expression firstExpression, secondExpression;
+
+    public MultiplicationExpression(Expression firstExpression, Expression secondExpression) {
+        this.firstExpression = firstExpression;
+        this.secondExpression = secondExpression;
     }
+
     @Override
-    public int interpret(){
-        return this.firstExpression.interpret()*this.secondExpression.interpret();
+    public int interpret() {
+        return this.firstExpression.interpret() * this.secondExpression.interpret();
     }
+
     @Override
-    public String toString(){
+    public String toString() {
         return "*";
     }
 }

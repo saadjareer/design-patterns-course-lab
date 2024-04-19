@@ -1,10 +1,11 @@
 package sdaia.courses.designpatterns.abstractFactory.topping;
 
 public class TomatoSauce implements Sauce {
-    public TomatoSauce(){
+    public TomatoSauce() {
         prepareSauce();
     }
-     @Override
+
+    @Override
     public void prepareSauce() {
         System.out.println("Preparing tomato sauce..");
     }

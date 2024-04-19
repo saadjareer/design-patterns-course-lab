@@ -2,7 +2,7 @@ package sdaia.courses.designpatterns.visitor.structure;
 
 import sdaia.courses.designpatterns.visitor.visitors.MailClientVisitor;
 
-public class OperaMailClient implements MailClient{
+public class OperaMailClient implements MailClient {
     @Override
     public void sendMail(String[] mailInfo) {
         System.out.println(" OperaMailClient: Sending mail");
@@ -11,7 +11,7 @@ public class OperaMailClient implements MailClient{
     @Override
     public void receiveMail(String[] mailInfo) {
         System.out.println(" OperaMailClient: Receiving mail");
-     }
+    }
 
     @Override
     public boolean accept(MailClientVisitor visitor) {

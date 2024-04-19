@@ -4,8 +4,9 @@ package sdaia.courses.designpatterns.interpreter;
 import java.util.Stack;
 
 public class ExpressionParser {
-    Stack<Expression> stack=new Stack<>();
-    public int parse(String str){
+    Stack<Expression> stack = new Stack<>();
+
+    public int parse(String str) {
         String[] tokenList = str.split(" ");
         for (String symbol : tokenList) {
             if (!ParserUtil.isOperator(symbol)) {
@@ -13,7 +14,7 @@ public class ExpressionParser {
                 stack.push(numberExpression);
                 System.out.println(String.format("Pushed to stack: %d", numberExpression.interpret()));
 
-            } else  if (ParserUtil.isOperator(symbol)) {
+            } else if (ParserUtil.isOperator(symbol)) {
                 Expression firstExpression = stack.pop();
                 Expression secondExpression = stack.pop();
                 System.out.println(String.format("Popped operands %d and %d",
@@ -26,7 +27,7 @@ public class ExpressionParser {
                 System.out.println(String.format("Pushed result to stack: %d", resultExpression.interpret()));
             }
         }
-       int result;
+        int result;
         result = stack.pop().interpret();
         return result;
 

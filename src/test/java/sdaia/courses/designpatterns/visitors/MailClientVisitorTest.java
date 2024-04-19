@@ -12,25 +12,25 @@ import sdaia.courses.designpatterns.visitor.visitors.WindowsMailClientVisitor;
 import static org.junit.Assert.assertTrue;
 
 public class MailClientVisitorTest {
-   private MacMailClientVisitor macVisitor;
-   private LinuxMailClientVisitor linuxVisitor;
-   private WindowsMailClientVisitor windowsVisitor;
-   private OperaMailClient operaMailClient;
-   private SquirrelMailClient squirrelMailClient;
-   private ZimbraMailClient zimbraMailClient;
+    private MacMailClientVisitor macVisitor;
+    private LinuxMailClientVisitor linuxVisitor;
+    private WindowsMailClientVisitor windowsVisitor;
+    private OperaMailClient operaMailClient;
+    private SquirrelMailClient squirrelMailClient;
+    private ZimbraMailClient zimbraMailClient;
 
     @Before
-    public void setup(){
-    macVisitor=new MacMailClientVisitor();
-    linuxVisitor=new  LinuxMailClientVisitor();
-    windowsVisitor=new WindowsMailClientVisitor();
-    operaMailClient = new OperaMailClient();
-    squirrelMailClient=new SquirrelMailClient();
-    zimbraMailClient=new ZimbraMailClient();
+    public void setup() {
+        macVisitor = new MacMailClientVisitor();
+        linuxVisitor = new LinuxMailClientVisitor();
+        windowsVisitor = new WindowsMailClientVisitor();
+        operaMailClient = new OperaMailClient();
+        squirrelMailClient = new SquirrelMailClient();
+        zimbraMailClient = new ZimbraMailClient();
     }
 
     @Test
-     public void testOperaMailClient() throws Exception {
+    public void testOperaMailClient() throws Exception {
         System.out.println("-----Testing Opera Mail Client for different environments-----");
         assertTrue(operaMailClient.accept(macVisitor));
         assertTrue(operaMailClient.accept(linuxVisitor));

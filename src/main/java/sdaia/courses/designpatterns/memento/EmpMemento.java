@@ -5,13 +5,15 @@ public class EmpMemento {
     private String empName;
     private String empPhoneNo;
     private String empDesignation;
-    public EmpMemento(int empId,String empName,String empPhoneNo,String empDesignation) {
+
+    public EmpMemento(int empId, String empName, String empPhoneNo, String empDesignation) {
         this.empId = empId;
         this.empName = empName;
         this.empPhoneNo = empPhoneNo;
         this.empDesignation = empDesignation;
     }
-   public int getEmpId() {
+
+    public int getEmpId() {
         return empId;
     }
 
@@ -28,10 +30,10 @@ public class EmpMemento {
     }
 
     @Override
-    public String toString(){
+    public String toString() {
         String str;
-        str = "Current Memento State" + this.empId +" , "+this.empName +" , "+this.getEmpPhoneNo()+" , "+this.getEmpDesignation();
+        str = "Current Memento State" + this.empId + " , " + this.empName + " , " + this.getEmpPhoneNo() + " , " + this.getEmpDesignation();
         return str;
     }
-    }
+}
 

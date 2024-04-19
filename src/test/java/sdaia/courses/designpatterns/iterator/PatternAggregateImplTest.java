@@ -30,10 +30,11 @@ public class PatternAggregateImplTest {
         System.out.println("-----Pattern list after removal operation-----");
         printPatterns(patternAggregate);
     }
-    public void printPatterns(PatternAggregate patternAggregate){
-        PatternIterator patternIterator= patternAggregate.getPatternIterator();
-        while(!patternIterator.isLastPattern()){
-            DesignPattern designPattern=patternIterator.nextPattern();
+
+    public void printPatterns(PatternAggregate patternAggregate) {
+        PatternIterator patternIterator = patternAggregate.getPatternIterator();
+        while (!patternIterator.isLastPattern()) {
+            DesignPattern designPattern = patternIterator.nextPattern();
             System.out.println(designPattern.getPatternType() + " : " + designPattern.getPatternName());
 
         }

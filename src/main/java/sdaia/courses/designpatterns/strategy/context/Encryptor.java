@@ -6,12 +6,15 @@ import sdaia.courses.designpatterns.strategy.strategies.EncryptionStrategy;
 public class Encryptor {
     private EncryptionStrategy strategy;
     private String plainText;
-    public Encryptor(EncryptionStrategy strategy){
-        this.strategy=strategy;
+
+    public Encryptor(EncryptionStrategy strategy) {
+        this.strategy = strategy;
     }
-    public void encrypt(){
+
+    public void encrypt() {
         strategy.encryptData(plainText);
     }
+
     public String getPlainText() {
         return plainText;
     }

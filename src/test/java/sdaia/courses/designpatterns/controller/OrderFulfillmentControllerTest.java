@@ -10,10 +10,10 @@ public class OrderFulfillmentControllerTest {
 
     @Test
     public void testOrderProduct() throws Exception {
-        OrderFulfillmentController controller=new OrderFulfillmentController();
-        controller.facade=new OrderServiceFacadeImpl();
+        OrderFulfillmentController controller = new OrderFulfillmentController();
+        controller.facade = new OrderServiceFacadeImpl();
         controller.orderProduct(9);
-        boolean result=controller.orderFulfilled;
+        boolean result = controller.orderFulfilled;
         assertTrue(result);
     }
 }

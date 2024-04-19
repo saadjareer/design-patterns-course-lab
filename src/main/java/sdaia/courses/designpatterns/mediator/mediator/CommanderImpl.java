@@ -22,10 +22,12 @@ public class CommanderImpl implements Commander {
     public boolean canAttack() {
         return attackStatus;
     }
+
     @Override
     public void startAttack(ArmedUnit armedUnit) {
         armedUnit.attack();
     }
+
     @Override
     public void ceaseAttack(ArmedUnit armedUnit) {
         armedUnit.stopAttack();

@@ -1,11 +1,10 @@
 package sdaia.courses.designpatterns.factoryMethod;
 
-public class PizzaFactory extends BasePizzaFactory{
+public class PizzaFactory extends BasePizzaFactory {
     @Override
-    public  Pizza createPizza(String type){
+    public Pizza createPizza(String type) {
         Pizza pizza;
-        switch (type.toLowerCase())
-        {
+        switch (type.toLowerCase()) {
             case "cheese":
                 pizza = new CheesePizza();
                 break;
@@ -15,7 +14,8 @@ public class PizzaFactory extends BasePizzaFactory{
             case "veggie":
                 pizza = new VeggiePizza();
                 break;
-            default: throw new IllegalArgumentException("No such pizza.");
+            default:
+                throw new IllegalArgumentException("No such pizza.");
         }
 
         pizza.addIngredients();

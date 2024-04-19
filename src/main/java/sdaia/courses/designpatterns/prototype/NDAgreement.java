@@ -16,7 +16,7 @@ public class NDAgreement extends PrototypeCapableDocument {
 
     @Override
     public PrototypeCapableDocument cloneDocument() throws CloneNotSupportedException {
-       /*Clone with deep copy*/
+        /*Clone with deep copy*/
         NDAgreement nda;
         nda = (NDAgreement) super.clone();
         AuthorizedSignatory clonedAuthorizedSignatory = (AuthorizedSignatory) nda.getAuthorizedSignatory().clone();

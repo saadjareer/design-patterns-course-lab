@@ -9,11 +9,10 @@ import sdaia.courses.designpatterns.abstractFactory.product.VeggiePizza;
 public class SicilianPizzaFactory extends BasePizzaFactory {
 
     @Override
-    public  Pizza createPizza(String type){
+    public Pizza createPizza(String type) {
         Pizza pizza;
-       BaseToppingFactory toppingFactory= new SicilianToppingFactory();
-        switch (type.toLowerCase())
-        {
+        BaseToppingFactory toppingFactory = new SicilianToppingFactory();
+        switch (type.toLowerCase()) {
             case "cheese":
                 pizza = new CheesePizza(toppingFactory);
                 break;
@@ -23,7 +22,8 @@ public class SicilianPizzaFactory extends BasePizzaFactory {
             case "veggie":
                 pizza = new VeggiePizza(toppingFactory);
                 break;
-            default: throw new IllegalArgumentException("No such pizza.");
+            default:
+                throw new IllegalArgumentException("No such pizza.");
         }
 
         pizza.addIngredients();

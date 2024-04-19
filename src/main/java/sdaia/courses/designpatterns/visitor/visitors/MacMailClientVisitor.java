@@ -5,7 +5,7 @@ import sdaia.courses.designpatterns.visitor.structure.OperaMailClient;
 import sdaia.courses.designpatterns.visitor.structure.SquirrelMailClient;
 import sdaia.courses.designpatterns.visitor.structure.ZimbraMailClient;
 
-public class MacMailClientVisitor implements MailClientVisitor{
+public class MacMailClientVisitor implements MailClientVisitor {
     @Override
     public void visit(OperaMailClient mailClient) {
         System.out.println("Configuration of Opera mail client for Mac complete");

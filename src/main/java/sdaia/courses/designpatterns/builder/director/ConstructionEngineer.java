@@ -5,7 +5,8 @@ import sdaia.courses.designpatterns.builder.product.House;
 
 public class ConstructionEngineer {
     private HouseBuilder houseBuilder;
-    public ConstructionEngineer(HouseBuilder houseBuilder){
+
+    public ConstructionEngineer(HouseBuilder houseBuilder) {
         this.houseBuilder = houseBuilder;
     }
 

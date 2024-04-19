@@ -4,30 +4,29 @@ import javax.crypto.Cipher;
 import javax.crypto.KeyGenerator;
 import javax.crypto.SecretKey;
 
-public class AesEncryptionStrategy implements EncryptionStrategy{
+public class AesEncryptionStrategy implements EncryptionStrategy {
 
-   @Override
+    @Override
     public void encryptData(String plaintext) {
-       System.out.println("-------Encrypting data using AES algorithm-------");
-       try {
-           KeyGenerator keyGenerator = KeyGenerator.getInstance("AES");
-           keyGenerator.init(128);
-           SecretKey secretKey = keyGenerator.generateKey();
-           byte[] plaintTextByteArray = plaintext.getBytes("UTF8");
+        System.out.println("-------Encrypting data using AES algorithm-------");
+        try {
+            KeyGenerator keyGenerator = KeyGenerator.getInstance("AES");
+            keyGenerator.init(128);
+            SecretKey secretKey = keyGenerator.generateKey();
+            byte[] plaintTextByteArray = plaintext.getBytes("UTF8");
 
-           Cipher cipher = Cipher.getInstance("AES");
-           cipher.init(Cipher.ENCRYPT_MODE, secretKey);
-           byte[] cipherText = cipher.doFinal(plaintTextByteArray);
+            Cipher cipher = Cipher.getInstance("AES");
+            cipher.init(Cipher.ENCRYPT_MODE, secretKey);
+            byte[] cipherText = cipher.doFinal(plaintTextByteArray);
 
-           System.out.println("Original data: " + plaintext);
-           System.out.println("Encrypted data:");
-           for (byte b : cipherText) {
-               System.out.print(b + " ");
-           }
-       }
-           catch(Exception ex){
-               ex.printStackTrace();
-           }
-       }
-   }
+            System.out.println("Original data: " + plaintext);
+            System.out.println("Encrypted data:");
+            for (byte b : cipherText) {
+                System.out.print(b + " ");
+            }
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+    }
+}
 

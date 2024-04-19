@@ -4,23 +4,25 @@ package sdaia.courses.designpatterns.iterator;
 import java.util.ArrayList;
 import java.util.List;
 
-public class PatternAggregateImpl implements PatternAggregate{
+public class PatternAggregateImpl implements PatternAggregate {
     List patternList;
-    public PatternAggregateImpl(){
-        patternList=new ArrayList();
+
+    public PatternAggregateImpl() {
+        patternList = new ArrayList();
     }
+
     @Override
-    public void addPattern(DesignPattern designPattern){
+    public void addPattern(DesignPattern designPattern) {
         patternList.add(designPattern);
     }
 
     @Override
-    public void removePattern(DesignPattern designPattern){
+    public void removePattern(DesignPattern designPattern) {
         patternList.remove(designPattern);
     }
 
     @Override
-    public PatternIterator getPatternIterator(){
+    public PatternIterator getPatternIterator() {
         return new PatternIteratorImpl(patternList);
     }
 }
